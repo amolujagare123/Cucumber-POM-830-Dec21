@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.IOException;
 
-import static util.ConfigReader.getUrl;
+import static utility.ConfigReader.getUrl;
 
 public class SharedSD {
 
@@ -19,18 +19,18 @@ public class SharedSD {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-
         driver.get(getUrl());
     }
 
     @After
     public void closeBrowser()
     {
-       // driver.close();
+        //driver.close();
     }
 
     public static WebDriver getDriver()
     {
         return driver;
     }
+
 }
